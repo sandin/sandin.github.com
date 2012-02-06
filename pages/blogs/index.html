@@ -1,0 +1,21 @@
+---
+layout: page
+title: "Blog"
+group: "navigation"
+---
+{% include JB/setup %}
+
+<div class="posts">
+  {% for post in site.posts %}
+    <div class="post">
+        <h3>{{ post.title }}</h3>
+        <div class="post-meta">&raquo;{{ post.date | date_to_string }}</div>
+        <div class="post-content">{{ post.content }}</div>
+        <div class="post-footer">
+            <a href="{{ BASE_PATH }}{{ post.url }}">Read More..</a>
+        </div>
+    </div>
+  {% endfor %}
+</div><!-- /posts -->
+
+ 
